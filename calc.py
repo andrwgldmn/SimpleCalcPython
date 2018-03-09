@@ -2,7 +2,7 @@
 # -*- coding: iso-8859-15 -*-
 
 #Импорт библиотек
-import scipy, math, cmath, sympy, mpmath, numpy, pandas, matplotlib
+import scipy, math, cmath, sympy, mpmath, numpy, pandas, matplotlib, os
 
 #Импорт из библиотек
 from sympy import *
