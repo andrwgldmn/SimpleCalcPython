@@ -2,21 +2,21 @@
 # -*- coding: iso-8859-15 -*-
 
 #Импорт библиотек
-import scipy, sys, math, cmath, itertools, sympy, mpmath, numpy
+import scipy, math, cmath, sympy, mpmath, numpy, pandas, matplotlib
 
 #Импорт из библиотек
 from sympy import *
 from math import *
 from cmath import *
-from itertools import *
 from mpmath import *
-from sys import *
 from scipy import *
 from numpy import *
+from pandas import *
+from matplotlib import *
 
 #Запрос на выбор операций
 print ("")
-value = int(input("Выберите нужное действие: \n  \n 1) Сложение  \n 2) Вычитание \n 3) Деление \n 4) Умножение \n 5) Найти синус \n 6) Найти косинус \n 7) Найти тангенс \n 8) Найти котангенс \n  "))
+value = int(input("Выберите нужное действие: \n  \n 1) Сложение  \n 2) Вычитание \n 3) Деление \n 4) Умножение \n 5) Найти синус \n 6) Найти косинус \n 7) Найти тангенс \n 8) Найти котангенс \n 9) Найти производную \n 10) Найти интеграл \n \n  "))
 print ("")
 
 #Сложение
@@ -77,10 +77,18 @@ if (value == 7):
     print ("")
     print float(tan(x))
 
-#Найти тангенс
+#Найти котангенс
 if (value == 8):
     x = float(input("Введите число: "))
-    sin = sin(x)
-    cos = cos(x)
+    tan = tan(x)
     print ("")
-    print float(cos/sin)
+    print float(1/tan)
+
+#Найти производную:
+if (value == 9):
+    print("Введите выражение: ")
+    print ("")
+    x = Symbol("x")
+    y = y.diff(x)
+    print ("")
+    print ("y")
