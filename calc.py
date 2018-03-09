@@ -96,4 +96,6 @@ while go_next:
         y = y.diff(x)
         print ("")
         print ("y")
+    input()
+    os.system('cls')
     go_next = 1
