@@ -151,17 +151,13 @@ while start:
         start = 1
     #Производная
     if (value == 10):
-        x = sympy.Symbol('x')
-        y = sympy.Symbol('y')
-        input_string = input('Выражение: ')
+        input_string = raw_input('Выражение: ')
         print ("")
         print ("")
         sympy.pprint (sympy.diff(input_string))
     #Интеграл
     if (value == 11):
-        x = sympy.Symbol('x')
-        y = sympy.Symbol('y')
-        input_string = input('Выражение: ')
+        input_string = raw_input('Выражение: ')
         print ("")
         print ("")
         sympy.pprint (sympy.Integral(input_string))
