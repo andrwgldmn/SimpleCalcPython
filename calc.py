@@ -164,62 +164,58 @@ while start:
             sys.exit()
         elif (value == 1):
             start = 1
-
+    #Строим график
     if (value == 9):
 
         fig = plt.figure()
-
         ax = fig.add_subplot(111)
         rect = ax.patch
         rect.set_facecolor('white')
         rect.set_alpha(0)
         print("")
-        x = np.arange(input(" Введите точку x: "))
-        y = input(" Введите выражение y: ")
-
+        x = np.arange(-25, 25)
+        y = input(" Введите выражение: ")
+        plt.plot(x, y)
+        ax = plt.gca()
+        ax.spines['left'].set_position('center')
+        ax.spines['bottom'].set_position('center')
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
         ax.plot(x, y, 'black')
-
         xax = ax.xaxis
-
         xlocs = xax.get_ticklocs()
         xlabels = xax.get_ticklabels()
         xlines = xax.get_ticklines()
-
         # вспомогательная сетка для главных делений 
-        ax.grid(True, which=u'major', color='w', linewidth=2., linestyle='solid')
-
+        ax.grid(True, which='major', color='y', linewidth=2., linestyle='solid')
         # вспомогательная сетка для вспомогательных делений 
-        ax.grid(True, which=u'minor', color='w')
-
-
+        ax.grid(True, which='minor', color='k')
         # Ось абсцисс
         for label in ax.xaxis.get_ticklabels():
             # label - это экземпляр текста Text
             label.set_color('black')
-            label.set_rotation(-45)
-            label.set_fontsize(15)
-
-        # Ось ориднат
+            label.set_rotation(0)
+            label.set_fontsize(14)
+        # Ось ординат
         for line in ax.yaxis.get_ticklines():
             # line - это экземпляр плоской линии Line2D
             line.set_color('black')   # задаём цвет линии деления
             line.set_markersize(14)   # задаём длину линии деления
-            line.set_markeredgewidth(1.5)   # задаём толщину линии деления
-
-        save('pic_8_1_1', fmt='png')
-
+            line.set_markeredgewidth(3)   # задаём толщину линии деления
+        #Сохранение в файл
+        save('graphic', fmt='png')
         for label in xlabels:
             # цвет подписи деленений оси OX
             label.set_color('black')
             # поворот подписей деленений оси OX 
-            label.set_rotation(45)
+            label.set_rotation(0)
             # размер шрифта подписей делений оси OX 
             label.set_fontsize(12)
-            
+        #Вывод графика
         plt.show()
         print ('----------------------------')
         value = input(" Вы хотите продолжить? \n \n Если да, введите 1. \n \n Если нет, введите 0. \n \n " )
-        if (value == 0): # FIXME: Выходит не с первого раза..
+        if (value == 0):
             print ('----------------------------')
             print (" Спасибо за использование!")
             print ('----------------------------')
@@ -227,11 +223,4 @@ while start:
         elif (value == 1): 
             start = 1
     else:
-        print ('----------------------------')
-        value = input(" Вы хотите выйти? \n \n Если да, введите 1. \n \n Если нет, введите 0. \n \n " )
-        if (value == 1):
-            print ('----------------------------')
-            print (" Спасибо за использование!")
-            sys.exit()
-        elif (value == 0):
-            start = 1
+        start = 1
