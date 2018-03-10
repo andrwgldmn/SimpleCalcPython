@@ -6,10 +6,10 @@ import math, sympy, sympy.abc, numpy as np, matplotlib, sys, matplotlib.pyplot a
 
 #Импорт из библиотек
 from sympy import *
-from math import sin, cos, tan, acos, asin, atan
+from math import sin, cos, tan
 from sys import *
 from os import *
-from sympy.abc import symbols
+from sympy.abc import symbols, x, y
 
 #Для сохранения графика в файл
 def save(name='', fmt='png'):
@@ -28,7 +28,7 @@ while start:
 
 #Запрос на выбор операций
     print (' ----------------------------')
-    value = int(input(" Выберите нужное действие: \n \n 0) Выход \n 1) Сложение  \n 2) Вычитание \n 3) Деление \n 4) Умножение \n 5) Найти синус \n 6) Найти косинус \n 7) Найти тангенс \n 8) Найти котангенс \n 9) Построить график  \n 10) Найти производную \n 11) Найти неопределённый интеграл \n ---------------------------- \n "))
+    value = int(input(" Выберите нужное действие: \n \n 0) Выход \n 1) Сложение  \n 2) Вычитание \n 3) Деление \n 4) Умножение \n 5) Найти синус \n 6) Найти косинус \n 7) Найти тангенс \n 8) Найти котангенс \n 9) Построить график  \n 10) Найти производную \n 11) Найти неопределённый интеграл \n 12) Найти лимит (x->оо) \n 13) Найти лимит (x->0) \n 14) Найти лимит (x->1) \n 15) Найти лимит (x->любое число) \n ---------------------------- \n "))
 
     #Выход
     if (value == 0):
@@ -151,18 +151,38 @@ while start:
         start = 1
     #Производная
     if (value == 10):
-        input_string = raw_input('Выражение: ')
+        input_string = raw_input(' Выражение: ')
         print ("")
         print ("")
         sympy.pprint (sympy.diff(input_string))
     #Интеграл
     if (value == 11):
-        input_string = raw_input('Выражение: ')
+        input_string = raw_input(' Выражение: ')
         print ("")
         print ("")
         sympy.pprint (sympy.Integral(input_string))
         print ("")
         sympy.pprint (integrate(input_string))
-
+    #Лимит (x->оо)
+    if (value == 12 ):
+        value = input(' Выражение: ') 
+        print ("")
+        print limit(value, x, oo)
+    #Лимит (x->0)
+    if (value == 13 ):
+        value = input(' Выражение: ') 
+        print ("")
+        print limit(value, x, 0)
+     #Лимит (x->1)
+    if (value == 14 ):
+        value = input(' Выражение: ') 
+        print ("")
+        print limit(value, x, 1)  
+    #Лимит (любое число)
+    if (value == 15 ):
+        value = input(' Выражение: ') 
+        stremlenie = input(' К чему стремится "x"? ')
+        print ("")
+        print limit(value, x, stremlenie) 
     else:
-        start = 1
+       start = 1
