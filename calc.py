@@ -2,7 +2,7 @@
 # -*- coding: iso-8859-15 -*-
 
 #Импорт библиотек
-import math, sympy, sympy.abc, numpy as np, matplotlib, sys, matplotlib.pyplot as plt, os, scipy
+import math, sympy, sympy.abc, numpy as np, matplotlib, sys, matplotlib.pyplot as plt, os, scipy, time
 
 #Импорт из библиотек
 from sympy import *
@@ -10,6 +10,9 @@ from math import sin, cos, tan
 from sys import *
 from os import *
 from sympy.abc import symbols, x, y
+
+#Задержка перед очисткой
+delay = 5            #время задержки в секундах;
 
 #Для сохранения графика в файл
 def save(name='', fmt='png'):
@@ -20,6 +23,10 @@ def save(name='', fmt='png'):
     os.chdir(iPath)
     plt.savefig('{}.{}'.format(name, fmt), fmt='png')
     os.chdir(pwd)
+
+#Чистка экрана
+def cls():
+    os.system('cls' if os.name=='nt' else 'clear')
 
 #Начало
 start = 1
@@ -44,6 +51,8 @@ while start:
         print (' {} + {}'.format(x, y)) 
         print (' ----------------------------')    
         print ( x + y )
+        time.sleep(delay)
+        cls()
         start = 1
     #Вычитание
     if (value == 2):
@@ -54,6 +63,8 @@ while start:
         print (' {} - {}'.format(x, y))   
         print (' ----------------------------')    
         print ( x - y )
+        time.sleep(delay)
+        cls()
         start = 1
     #Деление
     if (value == 3):
@@ -64,6 +75,8 @@ while start:
         print (' {} / {}'.format(x, y))
         print (' ----------------------------')
         print float( x / y )
+        time.sleep(delay)
+        cls()
         start = 1
     #Умножение
     if (value == 4):
@@ -74,24 +87,32 @@ while start:
         print (' {} * {}'.format(x, y))
         print (' ----------------------------')
         print ( x * y )
+        time.sleep(delay)
+        cls()
         start = 1
     #Найти синус
     if (value == 5):
         x = float(input(" Введите число: "))
         print (' ----------------------------')
         print float( sin(x) )
+        time.sleep(delay)
+        cls()
         start = 1
     #Найти косинус
     if (value == 6):
         x = float(input(" Введите число: "))
         print (' ----------------------------')
         print float( cos(x) )
+        time.sleep(delay)
+        cls()
         start = 1
     #Найти тангенс
     if (value == 7):
         x = float(input(" Введите число: "))
         print (' ----------------------------')
         print float( tan(x) )
+        time.sleep(delay)
+        cls()
         start = 1
     #Найти котангенс
     if (value == 8):
@@ -99,6 +120,8 @@ while start:
         tan = tan(x)
         print (' ----------------------------')
         print float( 1/tan )
+        time.sleep(delay)
+        cls()
         start = 1
     #Строим график
     if (value == 9):
@@ -155,6 +178,9 @@ while start:
         print ("")
         print ("")
         sympy.pprint (sympy.diff(input_string))
+        time.sleep(delay)
+        cls()
+        start = 1
     #Интеграл
     if (value == 11):
         input_string = raw_input(' Выражение: ')
@@ -163,26 +189,41 @@ while start:
         sympy.pprint (sympy.Integral(input_string))
         print ("")
         sympy.pprint (integrate(input_string))
+        time.sleep(delay)
+        cls()
+        start = 1
     #Лимит (x->оо)
     if (value == 12 ):
         value = input(' Выражение: ') 
         print ("")
-        print limit(value, x, oo)
+        sympy.pprint (limit(value, x, oo))
+        time.sleep(delay)
+        cls()
+        start = 1
     #Лимит (x->0)
     if (value == 13 ):
         value = input(' Выражение: ') 
         print ("")
-        print limit(value, x, 0)
+        sympy.pprint (limit(value, x, 0))
+        time.sleep(delay)
+        cls()
+        start = 1
      #Лимит (x->1)
     if (value == 14 ):
         value = input(' Выражение: ') 
         print ("")
-        print limit(value, x, 1)  
+        sympy.pprint (limit(value, x, 1))
+        time.sleep(delay)
+        cls()
+        start = 1
     #Лимит (любое число)
     if (value == 15 ):
         value = input(' Выражение: ') 
         stremlenie = input(' К чему стремится "x"? ')
         print ("")
-        print limit(value, x, stremlenie) 
+        sympy.pprint (limit(value, x, stremlenie))
+        time.sleep(delay)
+        cls()
+        start = 1
     else:
        start = 1
