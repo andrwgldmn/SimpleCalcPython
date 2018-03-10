@@ -1,8 +1,25 @@
 # SimpleCalcPython
 
-### How to use:
+## How to use:
 * sudo apt-get install python-tk
 * sudo pip install scipy sympy mpmath numpy
 * python calc.py
+
+### Features:
+* addition
+* subtraction
+* multiplication
+* division
+* sine
+* cosine
+* tangent
+* cotangent
+* drawing graphic
+* limit (if x -> 0)
+* limit (if x -> 1)
+* limit (if x -> ∞)
+* limit (if x -> any number)
+* undefinite integral
+* derival
 
 ## Python < 3 needed only.
