@@ -2,19 +2,14 @@
 # -*- coding: iso-8859-15 -*-
 
 #Импорт библиотек
-import scipy, math, cmath, sympy, mpmath, numpy, pandas, matplotlib, sys, matplotlib.pyplot as plt, os
+import math, sympy, sympy.abc, numpy as np, matplotlib, sys, matplotlib.pyplot as plt, os
 
 #Импорт из библиотек
 from sympy import *
-from math import *
-from cmath import *
-from mpmath import *
-from scipy import *
-from numpy import *
-from pandas import *
-from matplotlib import *
+from math import sin, cos, tan, acos, asin, atan
 from sys import *
 from os import *
+from sympy.abc import symbols
 
 #Для сохранения графика в файл
 def save(name='', fmt='png'):
@@ -33,7 +28,7 @@ while start:
 
 #Запрос на выбор операций
     print (' ----------------------------')
-    value = int(input(" Выберите нужное действие: \n \n 0) Выход \n 1) Сложение  \n 2) Вычитание \n 3) Деление \n 4) Умножение \n 5) Найти синус \n 6) Найти косинус \n 7) Найти тангенс \n 8) Найти котангенс \n 9) Построить график  \n ---------------------------- \n "))
+    value = int(input(" Выберите нужное действие: \n \n 0) Выход \n 1) Сложение  \n 2) Вычитание \n 3) Деление \n 4) Умножение \n 5) Найти синус \n 6) Найти косинус \n 7) Найти тангенс \n 8) Найти котангенс \n 9) Построить график  \n 10) Найти производную \n ---------------------------- \n "))
 
     #Выход
     if (value == 0):
@@ -154,5 +149,14 @@ while start:
         #Вывод графика
         plt.show()
         start = 1
+    #Производная
+    if (value == 10):
+        x, y = symbols('x y')
+        input_string = input('Выражение: ')
+        print ("")
+        res = sympy.diff(input_string)
+        print ("")
+        print (res)
+    
     else:
         start = 1
