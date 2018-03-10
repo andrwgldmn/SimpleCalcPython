@@ -2,7 +2,7 @@
 # -*- coding: iso-8859-15 -*-
 
 #Импорт библиотек
-import math, sympy, sympy.abc, numpy as np, matplotlib, sys, matplotlib.pyplot as plt, os
+import math, sympy, sympy.abc, numpy as np, matplotlib, sys, matplotlib.pyplot as plt, os, scipy
 
 #Импорт из библиотек
 from sympy import *
@@ -151,12 +151,11 @@ while start:
         start = 1
     #Производная
     if (value == 10):
-        x, y = symbols('x y')
+        x = sympy.Symbol('x')
+        y = sympy.Symbol('y')
         input_string = input('Выражение: ')
         print ("")
-        res = sympy.diff(input_string)
         print ("")
-        print (res)
-    
+        sympy.pprint (sympy.diff(input_string))
     else:
         start = 1
