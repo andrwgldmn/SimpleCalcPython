@@ -156,12 +156,15 @@ while start:
     if (value == 9):
 
         fig = plt.figure()
+        #Тип графика
         ax = fig.add_subplot(111)
         rect = ax.patch
         rect.set_facecolor('white')
         rect.set_alpha(0)
         print("")
+        #Предел по х
         x = np.arange(-25, 25)
+        #Ввод примера
         y = input(" Введите выражение: ")
         plt.plot(x, y)
         ax = plt.gca()
