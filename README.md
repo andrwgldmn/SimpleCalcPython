@@ -20,6 +20,7 @@
 * limit (if x -> ∞)
 * limit (if x -> any number)
 * undefinite integral
+* definite integral
 * derival
 * simplifying expressions
 * geometry calculations
