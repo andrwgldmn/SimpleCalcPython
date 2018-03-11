@@ -1,7 +1,7 @@
 # SimpleCalcPython
 
 ## How to use:
-* sudo apt-get install python-tk
+* sudo apt-get install python-tk python-pip
 * sudo pip install scipy sympy mpmath numpy
 * python calc.py
 
