@@ -21,5 +21,6 @@
 * limit (if x -> any number)
 * undefinite integral
 * derival
+* simplifying expressions
 
 ## Python < 3 needed only.
