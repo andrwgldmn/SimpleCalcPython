@@ -28,7 +28,7 @@ def save(name='', fmt='png'):
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
 
-#ПочаСтрум
+#Початок
 start = 1
 while start:
     start = 0
