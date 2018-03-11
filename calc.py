@@ -9,7 +9,7 @@ from sympy import *
 from math import sin, cos, tan
 from sys import *
 from os import *
-from sympy.abc import symbols, x, y
+from sympy.abc import symbols, x, y, theta
 
 #Задержка перед очисткой
 delay = 10            #время задержки в секундах;
@@ -330,7 +330,7 @@ while start:
     ##############################################################################################################################
     #Высшая математика
     if (value == 5):
-        value = int(input("\n 15) Производная  \n 25) Интеграл \n 35) Лимит (x->оо) \n 45) Лимит (x->0) \n 55) Лимит (x->1) \n 65) Лимит (любое число) \n \n "))
+        value = int(input("\n 15) Производная  \n 25) Интеграл \n 35) Лимит (x->оо) \n 45) Лимит (x->0) \n 55) Лимит (x->1) \n 65) Лимит (любое число) \n 75) Определённый интеграл \n \n "))
         #Производная
         if (value == 15):
             print ("")
@@ -346,9 +346,22 @@ while start:
             print ("")
             input_string = raw_input(' Выражение: ')
             print ("")
-            sympy.pprint (sympy.Integral(input_string))
+            sympy.pprint (sympy.Integral(input_string, x))
             print ("")
-            sympy.pprint (integrate(input_string))
+            sympy.pprint (integrate(input_string, x))
+            time.sleep(delay)
+            cls()
+            start = 1
+        #Определённый интеграл
+        if (value == 75):
+            print ("")
+            input_string = raw_input(' Выражение: ')
+            ot = float(input(' От: '))
+            do = float(input(' До: '))
+            print ("")
+            sympy.pprint (sympy.Integral(input_string, (x, ot, do)))
+            print ("")
+            sympy.pprint (integrate(input_string, (x, ot, do)))
             time.sleep(delay)
             cls()
             start = 1
