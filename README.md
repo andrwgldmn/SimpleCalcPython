@@ -2,7 +2,7 @@
 
 ## How to use:
 * sudo apt-get install python-tk python-pip
-* sudo pip install scipy sympy mpmath numpy
+* sudo pip install scipy sympy mpmath numpy matplotlib
 * python calc.py
 
 ### Features:
