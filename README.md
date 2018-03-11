@@ -22,5 +22,6 @@
 * undefinite integral
 * derival
 * simplifying expressions
+* geometry calculations
 
 ## Python < 3 needed only.
