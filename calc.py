@@ -35,7 +35,7 @@ while start:
 
 #Запрос на выбор операций
     print (' ----------------------------')
-    value = int(input(" Выберите нужное действие: \n \n 0) Выход \n 1) Сложение  \n 2) Вычитание \n 3) Деление \n 4) Умножение \n 5) Найти синус \n 6) Найти косинус \n 7) Найти тангенс \n 8) Найти котангенс \n 9) Построить график  \n 10) Найти производную \n 11) Найти неопределённый интеграл \n 12) Найти лимит (x->оо) \n 13) Найти лимит (x->0) \n 14) Найти лимит (x->1) \n 15) Найти лимит (x->любое число) \n 16) Сократить пример \n ---------------------------- \n "))
+    value = int(input(" Выберите нужное действие: \n \n 0) Выход \n 1) Сложение  \n 2) Вычитание \n 3) Деление \n 4) Умножение \n 5) Найти синус \n 6) Найти косинус \n 7) Найти тангенс \n 8) Найти котангенс \n 9) Построить график  \n 10) Найти производную \n 11) Найти неопределённый интеграл \n 12) Найти лимит (x->оо) \n 13) Найти лимит (x->0) \n 14) Найти лимит (x->1) \n 15) Найти лимит (x->любое число) \n 16) Сократить пример \n 17) Найти гипотенузу \n 18) Найти неизвестный катет \n 19) Найти площадь треугольника \n ---------------------------- \n "))
 
     #Выход
     if (value == 0):
@@ -44,6 +44,7 @@ while start:
 
     #Сложение
     if (value == 1):
+        print ("")
         x = float(input(" Введите первое число: "))
         print (' ----------------------------')
         y = float(input(" Введите второе число: "))
@@ -56,6 +57,7 @@ while start:
         start = 1
     #Вычитание
     if (value == 2):
+        print ("")
         x = float(input(" Введите первое число: "))
         print (' ----------------------------')
         y = float(input(" Введите второе число: "))
@@ -68,6 +70,7 @@ while start:
         start = 1
     #Деление
     if (value == 3):
+        print ("")
         x = float(input(" Введите первое число: "))
         print (' ----------------------------')
         y = float(input(" Введите второе число: "))
@@ -80,6 +83,7 @@ while start:
         start = 1
     #Умножение
     if (value == 4):
+        print ("")
         x = float(input(" Введите первое число: "))
         print (' ----------------------------')
         y = float(input(" Введите второе число: "))
@@ -92,6 +96,7 @@ while start:
         start = 1
     #Найти синус
     if (value == 5):
+        print ("")
         x = float(input(" Введите число: "))
         print (' ----------------------------')
         print float( sin(x) )
@@ -100,6 +105,7 @@ while start:
         start = 1
     #Найти косинус
     if (value == 6):
+        print ("")
         x = float(input(" Введите число: "))
         print (' ----------------------------')
         print float( cos(x) )
@@ -108,6 +114,7 @@ while start:
         start = 1
     #Найти тангенс
     if (value == 7):
+        print ("")
         x = float(input(" Введите число: "))
         print (' ----------------------------')
         print float( tan(x) )
@@ -116,6 +123,7 @@ while start:
         start = 1
     #Найти котангенс
     if (value == 8):
+        print ("")
         x = float(input(" Введите число: "))
         tan = tan(x)
         print (' ----------------------------')
@@ -174,8 +182,8 @@ while start:
         start = 1
     #Производная
     if (value == 10):
-        input_string = raw_input(' Выражение: ')
         print ("")
+        input_string = raw_input(' Выражение: ')
         print ("")
         sympy.pprint (sympy.diff(input_string))
         time.sleep(delay)
@@ -183,8 +191,8 @@ while start:
         start = 1
     #Интеграл
     if (value == 11):
-        input_string = raw_input(' Выражение: ')
         print ("")
+        input_string = raw_input(' Выражение: ')
         print ("")
         sympy.pprint (sympy.Integral(input_string))
         print ("")
@@ -194,6 +202,7 @@ while start:
         start = 1
     #Лимит (x->оо)
     if (value == 12 ):
+        print ("")
         value = input(' Выражение: ') 
         print ("")
         sympy.pprint (limit(value, x, oo))
@@ -202,6 +211,7 @@ while start:
         start = 1
     #Лимит (x->0)
     if (value == 13 ):
+        print ("")
         value = input(' Выражение: ') 
         print ("")
         sympy.pprint (limit(value, x, 0))
@@ -210,6 +220,7 @@ while start:
         start = 1
      #Лимит (x->1)
     if (value == 14 ):
+        print ("")
         value = input(' Выражение: ') 
         print ("")
         sympy.pprint (limit(value, x, 1))
@@ -218,6 +229,7 @@ while start:
         start = 1
     #Лимит (любое число)
     if (value == 15 ):
+        print ("")
         value = input(' Выражение: ') 
         stremlenie = input(' К чему стремится "x"? ')
         print ("")
@@ -227,10 +239,43 @@ while start:
         start = 1
     #Сократить пример
     if (value == 16):
+        print ("")
         primer = raw_input(" Введите пример: ")
         res = simplify(primer)
         print ("")
         sympy.pprint (res)
+        time.sleep(delay)
+        cls()
+        start = 1
+    #Найти гипотенузу
+    if (value == 17):
+        print ("")
+        katet_one = float(input(" Введите первый катет: "))
+        katet_two = float(input(" Введите второй катет: "))
+        gipot = math.sqrt(katet_one**2 + katet_two**2)
+        print ("")
+        print (gipot)
+        time.sleep(delay)
+        cls()
+        start = 1
+    #Найти катет
+    if (value == 18):
+        print ("")
+        katet = float(input(" Введите известный катет: "))
+        gipot = float(input(" Введите гипотенузу: "))
+        res = math.sqrt(gipot**2 - katet**2)
+        print ("")
+        print (res)
+        time.sleep(delay)
+        cls()
+        start = 1
+    #Найти площадь треугольника
+    if (value == 19):
+        print ("")
+        one = float(input(" Введите сторону: "))
+        two = float(input(" Введите сторону: ")) 
+        print ("")
+        print (two * one)
         time.sleep(delay)
         cls()
         start = 1
