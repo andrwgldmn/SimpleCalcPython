@@ -24,5 +24,6 @@
 * derival
 * simplifying expressions
 * geometry calculations
+* electricity calculations
 
 ## Python < 3 needed only.
