@@ -79,7 +79,7 @@ while start:
             print (' ----------------------------')
             print (' {} / {}'.format(x, y))
             print (' ----------------------------')
-            print float( x / y )
+            print ( x / y )
             time.sleep(delay)
             cls()
             start = 1
@@ -107,7 +107,7 @@ while start:
             print ("")
             x = float(input(" Введите число: "))
             print (' ----------------------------')
-            print float( sin(x) )
+            print ( sin(x) )
             time.sleep(delay)
             cls()
             start = 1
@@ -116,7 +116,7 @@ while start:
             print ("")
             x = float(input(" Введите число: "))
             print (' ----------------------------')
-            print float( cos(x) )
+            print ( cos(x) )
             time.sleep(delay)
             cls()
             start = 1
@@ -125,7 +125,7 @@ while start:
             print ("")
             x = float(input(" Введите число: "))
             print (' ----------------------------')
-            print float( tan(x) )
+            print ( tan(x) )
             time.sleep(delay)
             cls()
             start = 1
@@ -135,7 +135,7 @@ while start:
             x = float(input(" Введите число: "))
             tan = tan(x)
             print (' ----------------------------')
-            print float( 1/tan )
+            print ( 1/tan )
             time.sleep(delay)
             cls()
             start = 1
@@ -145,7 +145,7 @@ while start:
             x = float(input(" Введите число: "))
             sin = sin(x)
             print (' ----------------------------')
-            print float( 1/sin )
+            print ( 1/sin )
             time.sleep(delay)
             cls()
             start = 1
@@ -155,7 +155,7 @@ while start:
             x = float(input(" Введите число: "))
             cos = cos(x)
             print (' ----------------------------')
-            print float( 1/cos )
+            print ( 1/cos )
             time.sleep(delay)
             cls()
             start = 1
@@ -344,7 +344,9 @@ while start:
         #Интеграл
         if (value == 25):
             print ("")
-            input_string = raw_input(' Выражение: ')
+            x = Symbol("x")
+            y = Symbol("y")
+            input_string = input(' Выражение: ')
             print ("")
             sympy.pprint (sympy.Integral(input_string, x))
             print ("")
@@ -355,7 +357,9 @@ while start:
         #Определённый интеграл
         if (value == 75):
             print ("")
-            input_string = raw_input(' Выражение: ')
+            x = Symbol("x")
+            y = Symbol("y")
+            input_string = input(' Выражение: ')
             ot = float(input(' От: '))
             do = float(input(' До: '))
             print ("")
