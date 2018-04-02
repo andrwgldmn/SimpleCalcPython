@@ -26,4 +26,4 @@
 * geometry calculations
 * electricity calculations
 
-## Python < 3 needed only.
+## Python 2.7 needed only.
