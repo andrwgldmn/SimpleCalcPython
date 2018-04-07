@@ -1,4 +1,5 @@
 # SimpleCalcPython
+![ICON](https://github.com/andrwgldmn/SimpleCalcPython/blob/linux-py2.7/calc.ico)
 
 ## How to use:
 * sudo apt-get install python-tk python-pip
