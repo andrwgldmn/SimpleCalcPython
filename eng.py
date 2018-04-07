@@ -1,6 +1,3 @@
-#!/usr/bin/python
-# -*- coding: iso-8859-15 -*-
-
 #Import libraries
 import math, sympy, sympy.abc, numpy as np, matplotlib, sys, matplotlib.pyplot as plt, os, scipy, time
 
