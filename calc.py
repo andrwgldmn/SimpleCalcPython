@@ -4,18 +4,17 @@
 import sys
 from sys import exit
 
-start = 1
-while start:
-    start = 0
+value = None
+while value != 0:
 
     value = int(input(" \n 0) Выход/Exit/Вихід \n 1) Русский \n 2) English \n 3) Українська \n \n" ))
     if (value == 0):
         sys.exit()
-    if (value == 1):
+    elif (value == 1):
         import rus
-    if (value == 2):
+    elif (value == 2):
         import eng
-    if (value == 3):
+    elif (value == 3):
         import ukr
     else:
-        start = 1
+        print("I don't know what you write, try again")
