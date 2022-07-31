@@ -7,7 +7,7 @@ from sys import exit
 value = None
 while value != 0:
 
-    value = int(input(" \n 0) Выход/Exit/Вихід \n 1) Русский \n 2) English \n 3) Українська \n \n" ))
+    value = int(input(" \n 0) Выход/Exit/Вихід \n 1) English \n 3) Українська \n \n" ))
     if (value == 0):
         sys.exit()
     elif (value == 1):
