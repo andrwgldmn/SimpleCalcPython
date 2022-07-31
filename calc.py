@@ -11,10 +11,8 @@ while value != 0:
     if (value == 0):
         sys.exit()
     elif (value == 1):
-        import rus
-    elif (value == 2):
         import eng
-    elif (value == 3):
+    elif (value == 2):
         import ukr
     else:
         print("I don't know what you write, try again")
